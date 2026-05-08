@@ -267,7 +267,7 @@ export default function Dashboard({ persona, onAnalyze, onSleepEnv, onBack }) {
           style={{ color: 'var(--text-secondary)' }}
         >
           <i className="fa-solid fa-chevron-left text-[10px]" />
-          เลือก Persona
+          Choose Persona
         </button>
         <div className="flex items-center gap-3 mb-3">
           <div className="w-12 h-12 rounded-2xl overflow-hidden flex-shrink-0"
