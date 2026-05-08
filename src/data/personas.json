@@ -48,6 +48,68 @@
       "light_color": "#5ea8c8",
       "sound_theme": "rain",
       "sound_label": "Soft rain"
+    },
+    "wellness_plan": {
+      "sleep": {
+        "icon": "fa-moon",
+        "title": "Sleep",
+        "summary": "No screens after 9 PM — your HR spikes 12 bpm after checking dashboards",
+        "cta": "View sleep tips",
+        "goal": "Extend deep sleep by 45 min and cut sleep latency below 20 min",
+        "steps": [
+          "Stop all work apps and campaign dashboards by 9:00 PM",
+          "Dim your room lights to warm amber or off by 9:30 PM",
+          "Play soft rain sound at low volume as you wind down",
+          "Do 3 rounds of 4-7-8 breathing before lying down",
+          "Keep phone face-down and on silent outside the bedroom"
+        ],
+        "tip": "Your wearable shows HR stays elevated past midnight on deadline days. Closing work apps at 9 PM is the highest-impact single change you can make tonight."
+      },
+      "stress": {
+        "icon": "fa-brain",
+        "title": "Stress",
+        "summary": "Stress at 85% — do 4-7-8 breathing now to bring HR down",
+        "cta": "Start breathing",
+        "goal": "Lower cortisol before sleep and reduce HRV suppression",
+        "steps": [
+          "Set a 5-minute timer and close all work tabs",
+          "Inhale 4 counts, hold 7, exhale 8 — repeat 5 rounds",
+          "Write down 3 things you accomplished today (offload mental load)",
+          "Avoid checking metrics or Slack after this exercise",
+          "If thoughts race, write them on paper and close the notebook"
+        ],
+        "tip": "On high-stress days your HRV drops to 18 ms. The 4-7-8 method activates your parasympathetic system within 2 minutes — do it before, not after, you feel overwhelmed."
+      },
+      "activity": {
+        "icon": "fa-person-walking",
+        "title": "Activity",
+        "summary": "1,200 steps today — a 10-min walk now counts more than you think",
+        "cta": "Get moving",
+        "goal": "Reach 5,000 steps and reduce shoulder tension from desk sitting",
+        "steps": [
+          "Take a 10-minute walk outside after lunch — no headphones, just walk",
+          "Set a timer every 45 minutes to stand and stretch at your desk",
+          "Do 5 neck rolls and shoulder shrugs every hour",
+          "Use stairs instead of elevator for the rest of today",
+          "A short evening walk (before 8 PM) can help drop your resting HR"
+        ],
+        "tip": "Sedentary time above 8 hours correlates with your elevated resting HR. Even light movement every hour breaks the cycle — you don't need a workout today, just movement."
+      },
+      "nutrition": {
+        "icon": "fa-apple-whole",
+        "title": "Nutrition",
+        "summary": "Cut caffeine after 2 PM — it's disrupting your sleep onset",
+        "cta": "View food plan",
+        "goal": "Support sleep quality and reduce evening cortisol spikes",
+        "steps": [
+          "No coffee, energy drinks, or green tea after 2:00 PM",
+          "Swap afternoon coffee with chamomile or rooibos tea",
+          "Eat dinner before 7:30 PM to avoid digestion disrupting sleep",
+          "Avoid alcohol — it fragments sleep and suppresses REM",
+          "Drink a glass of warm water 30 min before bed to stay hydrated"
+        ],
+        "tip": "Caffeine has a 5-hour half-life — a 3 PM coffee still has half its effect at 8 PM when you're trying to wind down. This single change can reduce your sleep latency by 15–20 minutes."
+      }
     }
   },
   {
@@ -99,6 +161,68 @@
       "light_color": "#4fb7d8",
       "sound_theme": "ocean",
       "sound_label": "Ocean waves"
+    },
+    "wellness_plan": {
+      "sleep": {
+        "icon": "fa-moon",
+        "title": "Sleep",
+        "summary": "Sleep by 10:30 PM — late meals are raising your morning BP",
+        "cta": "Sleep schedule",
+        "goal": "Reach 7 hours and reduce snoring-related sleep disruption",
+        "steps": [
+          "Finish dinner at least 3 hours before bedtime (aim for 7:30 PM)",
+          "Sleep on your side rather than your back to reduce snoring",
+          "Keep bedroom cool — 18–20°C is ideal for metabolic recovery",
+          "Play ocean waves at low volume to mask ambient noise",
+          "Set a consistent wake time even on weekends to anchor your rhythm"
+        ],
+        "tip": "Your snoring pattern suggests partial airway obstruction when lying on your back. Side-sleeping is a free, immediate improvement that can raise your sleep quality score by 10–15%."
+      },
+      "stress": {
+        "icon": "fa-brain",
+        "title": "Stress",
+        "summary": "5-min slow breathing after meetings cuts your cortisol spike",
+        "cta": "Try now",
+        "goal": "Lower the stress-meal cycle that drives your evening eating",
+        "steps": [
+          "After each meeting, take 5 slow nasal breaths before checking email",
+          "Block 10 minutes at 5 PM as a transition buffer — no calls, no screens",
+          "If stressed before dinner, do box breathing (4-4-4-4) for 2 minutes",
+          "Write one priority task for tomorrow before leaving work — clears mental load",
+          "Avoid business calls or messages after 8 PM on weekdays"
+        ],
+        "tip": "Cortisol spikes from late-day stress directly trigger evening overeating, which worsens your morning blood pressure. A 5-minute decompression buffer between work and home makes a measurable difference."
+      },
+      "activity": {
+        "icon": "fa-person-walking",
+        "title": "Activity",
+        "summary": "2,800 steps only — 3 short walks a day hits your target",
+        "cta": "Walking plan",
+        "goal": "Reach 7,000 steps daily using your existing schedule as anchors",
+        "steps": [
+          "Morning: 10-minute walk before your first meeting (park further away)",
+          "Lunch: 10-minute walk after eating — aids digestion and metabolism",
+          "Evening: 10-minute walk after dinner — lowers post-meal blood glucose",
+          "Take calls standing or walking when content doesn't require a screen",
+          "Track steps on your phone — visibility alone increases movement by ~15%"
+        ],
+        "tip": "Three 10-minute walks scattered across your day are metabolically equivalent to one 30-minute session. This fits any meeting-heavy schedule without requiring a gym or workout clothes."
+      },
+      "nutrition": {
+        "icon": "fa-apple-whole",
+        "title": "Nutrition",
+        "summary": "Salty client dinners raise your BP — one swap tonight helps",
+        "cta": "Food swaps",
+        "goal": "Reduce sodium intake and stabilize evening blood glucose",
+        "steps": [
+          "At client dinners, choose steamed or grilled over fried dishes",
+          "Ask for sauces and dressings on the side — use half",
+          "Drink a glass of water between every alcoholic drink",
+          "Swap white rice for half portion of brown rice or skip the second serving",
+          "Aim for 8 glasses of water today — dehydration raises blood viscosity"
+        ],
+        "tip": "One high-sodium dinner can raise your morning systolic blood pressure by 5–8 mmHg. Asking for sauce on the side is the lowest-effort change with the highest cardiovascular payoff."
+      }
     }
   },
   {
@@ -150,6 +274,68 @@
       "light_color": "#8b7cf6",
       "sound_theme": "binaural",
       "sound_label": "Binaural recovery"
+    },
+    "wellness_plan": {
+      "sleep": {
+        "icon": "fa-moon",
+        "title": "Sleep",
+        "summary": "HRV 22 ms — tonight is a recovery priority, not training prep",
+        "cta": "Recovery protocol",
+        "goal": "Maximize slow-wave sleep for muscle repair and HRV restoration",
+        "steps": [
+          "Target 8–9 hours tonight — HRV at 22 ms means your body needs extra time",
+          "Cold shower (2 min) before bed to lower core temperature faster",
+          "Play binaural beats (delta 0.5–4 Hz) at very low volume",
+          "No training metrics, power data, or race plans after 8 PM",
+          "Darken your room completely — any light source reduces deep sleep"
+        ],
+        "tip": "At HRV 22 ms you are in a performance deficit. Tonight's deep sleep quality will determine whether tomorrow's training is productive or damaging. Treat this sleep like your most important workout."
+      },
+      "stress": {
+        "icon": "fa-brain",
+        "title": "Stress",
+        "summary": "Sympathetic overdrive detected — long exhale breathing resets it",
+        "cta": "Reset now",
+        "goal": "Shift nervous system from sympathetic to parasympathetic before sleep",
+        "steps": [
+          "Do 5 minutes of long exhale breathing: inhale 4, exhale 8",
+          "No intensity review, Strava uploads, or training analysis after 9 PM",
+          "Foam roll quads, calves, and thoracic spine for 15 minutes",
+          "If you must think about training, set a 5-minute limit then stop",
+          "Meditate or use a body scan app for 10 minutes in bed"
+        ],
+        "tip": "Your sympathetic nervous system is in overdrive from accumulated training load. Long exhales (2× inhale length) are the fastest evidence-based way to activate vagal tone and drop your baseline HR before sleep."
+      },
+      "activity": {
+        "icon": "fa-person-walking",
+        "title": "Activity",
+        "summary": "18,500 steps but HRV crashed — Zone 1 only today",
+        "cta": "Recovery mode",
+        "goal": "Allow physiological adaptation without adding more stress load",
+        "steps": [
+          "Today is a mandatory Zone 1 day — HR must stay below 130 bpm",
+          "Replace any planned intervals with a 30-min easy walk or light swim",
+          "15 minutes of foam rolling and static stretching post-session",
+          "No back-to-back hard days this week — insert a rest day tomorrow",
+          "Assess HRV tomorrow morning before deciding on training intensity"
+        ],
+        "tip": "At 18,500 steps + HRV 22 ms, adding any intensity today extends your recovery debt by 48 hours. A Zone 1 day now saves 2 days of underperformance later — this is the smarter training decision."
+      },
+      "nutrition": {
+        "icon": "fa-apple-whole",
+        "title": "Nutrition",
+        "summary": "High carb + protein dinner accelerates overnight muscle repair",
+        "cta": "Recovery meal plan",
+        "goal": "Optimize muscle glycogen replenishment and protein synthesis overnight",
+        "steps": [
+          "Post-training: 30–40g protein within 30 minutes (shake or chicken)",
+          "Dinner: high complex carbs (rice, sweet potato) to replenish glycogen",
+          "Include anti-inflammatory foods: salmon, spinach, blueberries, turmeric",
+          "Avoid alcohol — even 1 drink reduces overnight HRV recovery by ~30%",
+          "Magnesium-rich foods (pumpkin seeds, dark chocolate) support deep sleep"
+        ],
+        "tip": "Muscle protein synthesis peaks 24–48 hours post-training. Tonight's protein intake directly funds tomorrow's adaptation. Skip this and today's hard work has less payoff."
+      }
     }
   },
   {
@@ -201,6 +387,68 @@
       "light_color": "#5b8def",
       "sound_theme": "deep_sleep",
       "sound_label": "Deep sleep low tone"
+    },
+    "wellness_plan": {
+      "sleep": {
+        "icon": "fa-moon",
+        "title": "Sleep",
+        "summary": "Dim all lights by 7 PM — your eyes are very sensitive to evening light",
+        "cta": "Sleep routine",
+        "goal": "Reduce nighttime awakenings and improve sleep continuity",
+        "steps": [
+          "Begin dimming room lights gradually from 7:00 PM onward",
+          "Use a very dim nightlight (red or amber only) for bathroom trips",
+          "Keep bedroom temperature cool and comfortable — around 20°C",
+          "Play gentle low-frequency sound at the quietest comfortable volume",
+          "Try to wake at the same time every morning — even on quiet days"
+        ],
+        "tip": "Your eyes are more sensitive to blue light than younger adults, and even a brief bright light exposure at 2 AM can reset your circadian clock. A dim amber nightlight for bathroom trips protects the rest of your sleep."
+      },
+      "stress": {
+        "icon": "fa-brain",
+        "title": "Stress",
+        "summary": "Gentle stretching and warm tea before bed — simple and effective",
+        "cta": "Evening routine",
+        "goal": "Create a calm transition ritual that signals sleep is coming",
+        "steps": [
+          "At 8:00 PM, make a cup of chamomile or warm milk",
+          "Do 5 minutes of gentle seated stretching (neck, shoulders, hands)",
+          "Read a physical book or do a light puzzle — no screens after 8 PM",
+          "If you wake at night, stay calm — take 3 slow natural breaths",
+          "Remind yourself: waking briefly at night is normal at every age"
+        ],
+        "tip": "Worrying about not sleeping is one of the main reasons it's hard to fall back asleep. A reassuring bedtime ritual tells your nervous system the night is safe and sleep will come — which it usually does within 15–20 minutes."
+      },
+      "activity": {
+        "icon": "fa-person-walking",
+        "title": "Activity",
+        "summary": "Morning sunlight walk — the best natural circadian anchor for you",
+        "cta": "Movement ideas",
+        "goal": "Strengthen circadian rhythm with morning light and gentle daily movement",
+        "steps": [
+          "Morning walk for 20 minutes in natural sunlight — before 10 AM is ideal",
+          "If outdoors isn't possible, sit near a bright window for 20 minutes",
+          "Light chair exercises: seated leg raises, ankle circles, arm stretches",
+          "Gentle garden work or household tasks count as beneficial movement",
+          "Avoid vigorous activity after 4 PM — it delays your body's sleep signal"
+        ],
+        "tip": "Morning sunlight is the most powerful circadian signal your body has. Even 15 minutes of outdoor light before 10 AM anchors your sleep-wake rhythm and can reduce nighttime awakenings by reducing circadian drift."
+      },
+      "nutrition": {
+        "icon": "fa-apple-whole",
+        "title": "Nutrition",
+        "summary": "Light dinner by 6 PM and warm milk before bed — proven helpers",
+        "cta": "Evening meals",
+        "goal": "Support melatonin production and reduce nighttime bathroom waking",
+        "steps": [
+          "Eat a light dinner by 6:00–6:30 PM — avoid heavy or spicy food at night",
+          "Limit fluids after 7 PM to reduce bathroom trips overnight",
+          "Warm milk or golden milk (turmeric + milk) 30 min before bed",
+          "Tryptophan-rich snacks help: a small banana or a few walnuts",
+          "Avoid caffeine after noon — tea and chocolate count too"
+        ],
+        "tip": "Warm milk contains tryptophan, which helps produce serotonin and melatonin — your natural sleep hormone. This is not just an old wives' tale. Combined with reduced fluids after 7 PM, it can noticeably reduce nighttime awakenings."
+      }
     }
   },
   {
@@ -252,6 +500,68 @@
       "light_color": "#5b8def",
       "sound_theme": "ocean",
       "sound_label": "Low ocean"
+    },
+    "wellness_plan": {
+      "sleep": {
+        "icon": "fa-moon",
+        "title": "Sleep",
+        "summary": "Sleep when baby sleeps — every window counts for your recovery",
+        "cta": "Micro-sleep tips",
+        "goal": "Maximize recovery quality in short unpredictable sleep windows",
+        "steps": [
+          "When the baby sleeps, put your phone down within 60 seconds and lie down",
+          "Keep your room very dim (near dark) during every sleep window",
+          "Play low-volume ocean or white noise — it helps you fall asleep faster",
+          "Accept 20–45 min naps as real recovery — they restore alertness significantly",
+          "Don't use baby's nap time to catch up on tasks — rest comes first"
+        ],
+        "tip": "Short sleep windows feel frustrating, but 20–30 minute naps restore cognitive function and reduce cortisol by up to 25%. Every window you use for rest compounds into better overall recovery — even fragmented sleep beats no sleep."
+      },
+      "stress": {
+        "icon": "fa-brain",
+        "title": "Stress",
+        "summary": "2-min box breathing after night waking — works fast, no lights needed",
+        "cta": "Quick reset",
+        "goal": "Downshift nervous system quickly after disruptions to fall back asleep",
+        "steps": [
+          "After waking at night: box breathing — inhale 4, hold 4, exhale 4, hold 4",
+          "Stay in the dark — reaching for your phone resets your circadian clock",
+          "No doom-scrolling during night feeds — use this time to breathe and rest",
+          "If stressed about tasks, remind yourself: one thing at a time, right now is rest",
+          "A short 2-minute breathing session is enough — don't try to do a full meditation"
+        ],
+        "tip": "After a disrupted wake your stress hormones spike within 3 minutes. Box breathing interrupts that spike before it fully activates, making it much easier to fall back asleep within 10–15 minutes instead of lying awake for an hour."
+      },
+      "activity": {
+        "icon": "fa-person-walking",
+        "title": "Activity",
+        "summary": "Baby carrier walk — good for both of you and boosts your energy",
+        "cta": "Move with baby",
+        "goal": "Use gentle movement to regulate mood and energy without adding fatigue",
+        "steps": [
+          "Morning: 15-minute walk with the baby in a carrier or stroller",
+          "Fresh air and sunlight in the morning anchor your circadian rhythm",
+          "5 minutes of gentle yoga or stretching while baby plays on the floor",
+          "Pelvic floor and core exercises during any lying-down rest period",
+          "Avoid intense cardio or HIIT until HRV is consistently above 40 ms"
+        ],
+        "tip": "Gentle outdoor movement is one of the most effective mood regulators available to you right now. Even 10 minutes outside resets cortisol and increases dopamine — and the sunlight exposure helps anchor your sleep rhythm despite irregular nights."
+      },
+      "nutrition": {
+        "icon": "fa-apple-whole",
+        "title": "Nutrition",
+        "summary": "Easy high-energy snacks on hand — fatigue kills food choices",
+        "cta": "Energy snacks",
+        "goal": "Sustain energy through irregular schedule without blood sugar crashes",
+        "steps": [
+          "Keep ready-to-eat snacks nearby: nuts, boiled eggs, fruit, yogurt",
+          "Eat something with protein every 3–4 hours — don't skip meals when tired",
+          "Stay hydrated — fatigue and dehydration feel the same and dehydration is faster to fix",
+          "Limit caffeine to morning only — caffeine after 1 PM fragments your night windows",
+          "Omega-3 rich foods (salmon, walnuts, chia) support mood and postpartum recovery"
+        ],
+        "tip": "Decision fatigue from sleep deprivation makes nutrition choices harder. Prepping simple snacks when you have a good moment removes the decision entirely — which is the most reliable way to eat well when running on low sleep."
+      }
     }
   }
 ]

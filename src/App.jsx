@@ -60,6 +60,11 @@ export default function App() {
     setScreen(SCREENS.WELCOME);
   };
 
+  const handleBackToWelcome = () => {
+    setInsight(null);
+    setScreen(SCREENS.WELCOME);
+  };
+
   const handleBackToDashboard = () => {
     deactivate();
     setScreen(SCREENS.DASHBOARD);
@@ -86,6 +91,7 @@ export default function App() {
               persona={selectedPersona}
               onAnalyze={handleAnalyze}
               onSleepEnv={() => setScreen(SCREENS.SLEEP_ENV)}
+              onBack={handleBackToWelcome}
             />
           </motion.div>
         )}

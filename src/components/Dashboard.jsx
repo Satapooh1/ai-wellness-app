@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, ReferenceLine
 } from 'recharts';
@@ -161,22 +162,113 @@ function PersonaMemoryCard({ persona }) {
   );
 }
 
-export default function Dashboard({ persona, onAnalyze, onSleepEnv }) {
+const PLAN_COLORS = {
+  Sleep:      { accent: 'var(--accent-blue)',   bg: 'rgba(59,130,246,0.10)' },
+  Stress:     { accent: 'var(--accent-coral)',  bg: 'rgba(239,68,68,0.10)' },
+  Activity:   { accent: 'var(--accent-teal)',   bg: 'rgba(16,185,129,0.10)' },
+  Nutrition:  { accent: 'var(--accent-amber)',  bg: 'rgba(245,158,11,0.10)' },
+};
+
+function PlanDetailSheet({ item, personaColor, onClose }) {
+  const colors = PLAN_COLORS[item.title] ?? { accent: personaColor, bg: `${personaColor}18` };
+  return (
+    <motion.div
+      className="absolute inset-0 z-50 flex flex-col justify-end"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <div className="absolute inset-0 bg-black/50" onClick={onClose} />
+      <motion.div
+        className="relative rounded-t-3xl px-5 pt-5 pb-8 max-h-[84%] overflow-y-auto"
+        style={{ background: 'var(--bg-surface)', borderTop: `2px solid ${colors.accent}` }}
+        initial={{ y: '100%' }}
+        animate={{ y: 0 }}
+        exit={{ y: '100%' }}
+        transition={{ type: 'spring', damping: 28, stiffness: 280 }}
+      >
+        {/* drag handle */}
+        <div className="w-10 h-1 rounded-full mx-auto mb-4" style={{ background: 'var(--border)' }} />
+
+        {/* header */}
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-11 h-11 rounded-2xl flex items-center justify-center flex-shrink-0"
+            style={{ background: colors.bg }}>
+            <i className={`fa-solid ${item.icon} text-base`} style={{ color: colors.accent }} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-[11px] font-semibold" style={{ color: 'var(--text-secondary)' }}>Daily plan</p>
+            <h3 className="text-lg font-black leading-tight" style={{ color: 'var(--text-primary)' }}>{item.title}</h3>
+          </div>
+          <button onClick={onClose}
+            className="w-8 h-8 rounded-full flex items-center justify-center"
+            style={{ background: 'rgba(0,0,0,0.06)' }}>
+            <i className="fa-solid fa-xmark text-sm" style={{ color: 'var(--text-secondary)' }} />
+          </button>
+        </div>
+
+        {/* goal */}
+        <div className="rounded-2xl p-3 mb-4 flex items-start gap-2"
+          style={{ background: colors.bg, border: `1px solid ${colors.accent}30` }}>
+          <i className="fa-solid fa-bullseye text-xs mt-0.5" style={{ color: colors.accent }} />
+          <p className="text-xs font-medium leading-snug" style={{ color: 'var(--text-primary)' }}>{item.goal}</p>
+        </div>
+
+        {/* steps */}
+        <p className="text-xs font-bold mb-2" style={{ color: 'var(--text-secondary)' }}>TODAY'S STEPS</p>
+        <div className="flex flex-col gap-2 mb-4">
+          {item.steps.map((step, i) => (
+            <div key={i} className="flex items-start gap-3 p-3 rounded-2xl"
+              style={{ background: 'rgba(0,0,0,0.025)', border: '1px solid var(--border)' }}>
+              <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 text-[11px] font-bold mt-0.5"
+                style={{ background: colors.bg, color: colors.accent }}>
+                {i + 1}
+              </span>
+              <p className="text-xs leading-snug" style={{ color: 'var(--text-primary)' }}>{step}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* agent tip */}
+        <div className="rounded-2xl p-3 flex items-start gap-2"
+          style={{ background: 'rgba(0,0,0,0.02)', border: '1px solid var(--border)' }}>
+          <i className="fa-solid fa-database text-xs mt-0.5" style={{ color: personaColor }} />
+          <p className="text-[11px] leading-snug" style={{ color: 'var(--text-secondary)' }}>
+            <span className="font-semibold" style={{ color: 'var(--text-primary)' }}>Agent note: </span>
+            {item.tip}
+          </p>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+export default function Dashboard({ persona, onAnalyze, onSleepEnv, onBack }) {
   const { metrics, sleep_chart } = persona;
   const summary = riskSummary(metrics);
   const sleepStatus = getMetricStatus('sleep', metrics.sleep_hours);
   const patterns = buildPatterns(metrics, persona);
+  const [activePlan, setActivePlan] = useState(null);
 
+  const wp = persona.wellness_plan ?? {};
   const plan = [
-    { icon: 'fa-moon', title: 'Sleep', text: 'Maintain consistent sleep schedule, reduce screen time before bed', cta: 'View sleep mood' },
-    { icon: 'fa-brain', title: 'Stress', text: 'Do breathing exercises 5-10 minutes today', cta: 'Start now' },
-    { icon: 'fa-person-walking', title: 'Activity', text: 'Light walk after meals 10-15 minutes', cta: 'Increase steps' },
-    { icon: 'fa-apple-whole', title: 'Nutrition', text: 'Reduce sugar/salt in dinner, drink enough water', cta: 'View plan' },
+    { key: 'sleep',     ...(wp.sleep     ?? {}), icon: 'fa-moon',         title: 'Sleep'     },
+    { key: 'stress',    ...(wp.stress    ?? {}), icon: 'fa-brain',        title: 'Stress'    },
+    { key: 'activity',  ...(wp.activity  ?? {}), icon: 'fa-person-walking',title: 'Activity'  },
+    { key: 'nutrition', ...(wp.nutrition ?? {}), icon: 'fa-apple-whole',  title: 'Nutrition' },
   ];
 
   return (
     <div className="min-h-dvh flex flex-col px-4 py-5">
       <motion.div initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} className="mb-4">
+        <button
+          onClick={onBack}
+          className="flex items-center gap-1.5 mb-3 text-xs font-medium"
+          style={{ color: 'var(--text-secondary)' }}
+        >
+          <i className="fa-solid fa-chevron-left text-[10px]" />
+          เลือก Persona
+        </button>
         <div className="flex items-center gap-3 mb-3">
           <div className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0"
             style={{ background: `${persona.avatar_color}20`, border: `1px solid ${persona.avatar_color}30` }}>
@@ -307,16 +399,24 @@ export default function Dashboard({ persona, onAnalyze, onSleepEnv }) {
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }}
         className="glass p-4 mb-5">
         <h3 className="text-sm font-bold mb-1" style={{ color: 'var(--text-primary)' }}>Personalized daily wellness plan</h3>
-        <p className="text-xs mb-3" style={{ color: 'var(--text-secondary)' }}>Practical steps to support your health today.</p>
+        <p className="text-xs mb-3" style={{ color: 'var(--text-secondary)' }}>Tap a card to see your personalised steps.</p>
         <div className="grid grid-cols-2 gap-2">
-          {plan.map(item => (
-            <div key={item.title} className="p-3 rounded-2xl" style={{ background: 'rgba(0,0,0,0.02)', border: '1px solid var(--border)' }}>
-              <i className={`fa-solid ${item.icon} text-sm mb-2`} style={{ color: 'var(--accent-teal)' }} />
-              <p className="text-xs font-bold" style={{ color: 'var(--text-primary)' }}>{item.title}</p>
-              <p className="text-[11px] leading-snug mt-1" style={{ color: 'var(--text-secondary)' }}>{item.text}</p>
-              <p className="text-[11px] font-semibold mt-2" style={{ color: 'var(--accent-teal)' }}>{item.cta} →</p>
-            </div>
-          ))}
+          {plan.map(item => {
+            const colors = PLAN_COLORS[item.title] ?? { accent: persona.avatar_color, bg: `${persona.avatar_color}18` };
+            return (
+              <button
+                key={item.key}
+                onClick={() => setActivePlan(item)}
+                className="p-3 rounded-2xl text-left transition-transform active:scale-95"
+                style={{ background: 'rgba(0,0,0,0.02)', border: `1px solid var(--border)` }}
+              >
+                <i className={`fa-solid ${item.icon} text-sm mb-2 block`} style={{ color: colors.accent }} />
+                <p className="text-xs font-bold" style={{ color: 'var(--text-primary)' }}>{item.title}</p>
+                <p className="text-[11px] leading-snug mt-1 line-clamp-3" style={{ color: 'var(--text-secondary)' }}>{item.summary}</p>
+                <p className="text-[11px] font-semibold mt-2" style={{ color: colors.accent }}>{item.cta} →</p>
+              </button>
+            );
+          })}
         </div>
       </motion.div>
 
@@ -342,6 +442,16 @@ export default function Dashboard({ persona, onAnalyze, onSleepEnv }) {
           Adjust Sleep Mood & Environment
         </button>
       </motion.div>
+
+      <AnimatePresence>
+        {activePlan && (
+          <PlanDetailSheet
+            item={activePlan}
+            personaColor={persona.avatar_color}
+            onClose={() => setActivePlan(null)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
