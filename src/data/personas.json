@@ -1,0 +1,257 @@
+[
+  {
+    "id": "burnout",
+    "name": "Praew",
+    "display_name": "Praew - Burnout Marketer",
+    "subtitle": "High stress, short sleep, late-night work",
+    "headline": "Startup marketer whose brain stays online after work",
+    "fa_icon": "fa-person-drowning",
+    "age": 28,
+    "occupation": "Growth Marketer at a startup",
+    "avatar_color": "#ff6b6b",
+    "bio": "Praew works late, drinks coffee in the afternoon, and checks campaign metrics before bed. Her wearable shows high night heart rate, low HRV, and fragmented sleep after high-pressure days.",
+    "symptoms": ["Sleep latency over 60 min", "Wakes at 3 AM", "Neck and shoulder tension"],
+    "goals": ["Reduce pre-sleep anxiety", "Wake up with more energy", "Stop work thoughts before bed"],
+    "agent_memory": [
+      "After 9 PM, campaign dashboards usually raise her stress and heart rate.",
+      "Rain sound works better for her than binaural tones when anxiety is high.",
+      "She responds best to gentle nudges, not strict warnings."
+    ],
+    "known_patterns": ["Late screen time", "Afternoon caffeine", "Low HRV after deadline days"],
+    "preferred_intervention": {
+      "light": "dim teal-blue",
+      "sound": "rain",
+      "breathing": "4-7-8 breathing",
+      "tone": "calm and reassuring"
+    },
+    "metrics": {
+      "sleep_hours": 4.5,
+      "sleep_quality": 38,
+      "heart_rate_avg": 92,
+      "heart_rate_night": 88,
+      "stress_level": 85,
+      "steps_today": 1200,
+      "hrv": 28,
+      "bmi": 22.4
+    },
+    "sleep_chart": [
+      { "day": "Mon", "hours": 4.2 },
+      { "day": "Tue", "hours": 3.8 },
+      { "day": "Wed", "hours": 5.1 },
+      { "day": "Thu", "hours": 4.0 },
+      { "day": "Fri", "hours": 3.5 },
+      { "day": "Sat", "hours": 6.2 },
+      { "day": "Sun", "hours": 4.5 }
+    ],
+    "smart_home": {
+      "light_mode": "calm",
+      "light_color": "#5ea8c8",
+      "sound_theme": "rain",
+      "sound_label": "Soft rain"
+    }
+  },
+  {
+    "id": "chronic",
+    "name": "Somchai",
+    "display_name": "Somchai - Metabolic Risk Manager",
+    "subtitle": "Low steps, high BMI, early blood pressure risk",
+    "headline": "Sales manager with travel meals and low daily movement",
+    "fa_icon": "fa-heart-pulse",
+    "age": 45,
+    "occupation": "Regional Sales Manager",
+    "avatar_color": "#f4b454",
+    "bio": "Somchai spends long days in meetings, eats salty client dinners, and walks less than 3,000 steps on most weekdays. His profile suggests early metabolic and cardiovascular risk signals.",
+    "symptoms": ["Morning blood pressure spikes", "Loud snoring", "Unrefreshed sleep"],
+    "goals": ["Lower cardiometabolic risk", "Improve sleep breathing quality", "Build a sustainable walking routine"],
+    "agent_memory": [
+      "Weekdays with client dinners correlate with higher morning blood pressure.",
+      "He follows health plans better when actions are framed as small business-day routines.",
+      "Ocean sound and slower breathing help him settle without feeling medicalized."
+    ],
+    "known_patterns": ["Low weekday steps", "Salty evening meals", "Possible mild sleep apnea signal"],
+    "preferred_intervention": {
+      "light": "low blue-teal",
+      "sound": "ocean",
+      "breathing": "slow nasal breathing",
+      "tone": "practical and direct"
+    },
+    "metrics": {
+      "sleep_hours": 6.5,
+      "sleep_quality": 62,
+      "heart_rate_avg": 82,
+      "heart_rate_night": 75,
+      "stress_level": 60,
+      "steps_today": 2800,
+      "hrv": 35,
+      "bmi": 28.1
+    },
+    "sleep_chart": [
+      { "day": "Mon", "hours": 6.0 },
+      { "day": "Tue", "hours": 6.5 },
+      { "day": "Wed", "hours": 7.0 },
+      { "day": "Thu", "hours": 5.8 },
+      { "day": "Fri", "hours": 6.2 },
+      { "day": "Sat", "hours": 7.5 },
+      { "day": "Sun", "hours": 6.5 }
+    ],
+    "smart_home": {
+      "light_mode": "cool",
+      "light_color": "#4fb7d8",
+      "sound_theme": "ocean",
+      "sound_label": "Ocean waves"
+    }
+  },
+  {
+    "id": "overtrained",
+    "name": "Mark",
+    "display_name": "Mark - Overtrained Athlete",
+    "subtitle": "High training load, low HRV, recovery risk",
+    "headline": "Triathlon coach pushing through recovery debt",
+    "fa_icon": "fa-person-running",
+    "age": 32,
+    "occupation": "Fitness Coach and triathlete",
+    "avatar_color": "#37c6a6",
+    "bio": "Mark trains intensely every day while preparing for a race. His resting heart rate is elevated and HRV is suppressed, suggesting his body is not fully recovering.",
+    "symptoms": ["High resting HR", "Very low HRV", "Persistent muscle soreness"],
+    "goals": ["Protect recovery", "Avoid overtraining", "Improve deep sleep for muscle repair"],
+    "agent_memory": [
+      "After interval training days, his HRV often drops for 24-36 hours.",
+      "He ignores generic rest advice, but responds to performance-based recovery framing.",
+      "Binaural or deep sleep tones are more useful than nature sounds for him."
+    ],
+    "known_patterns": ["Training load spike", "Sympathetic dominance", "Recovery debt"],
+    "preferred_intervention": {
+      "light": "near-dark violet-blue",
+      "sound": "binaural",
+      "breathing": "long exhale breathing",
+      "tone": "performance recovery"
+    },
+    "metrics": {
+      "sleep_hours": 7.0,
+      "sleep_quality": 55,
+      "heart_rate_avg": 72,
+      "heart_rate_night": 68,
+      "stress_level": 70,
+      "steps_today": 18500,
+      "hrv": 22,
+      "bmi": 21.8
+    },
+    "sleep_chart": [
+      { "day": "Mon", "hours": 7.5 },
+      { "day": "Tue", "hours": 6.8 },
+      { "day": "Wed", "hours": 7.2 },
+      { "day": "Thu", "hours": 6.5 },
+      { "day": "Fri", "hours": 7.0 },
+      { "day": "Sat", "hours": 8.0 },
+      { "day": "Sun", "hours": 7.0 }
+    ],
+    "smart_home": {
+      "light_mode": "recovery",
+      "light_color": "#8b7cf6",
+      "sound_theme": "binaural",
+      "sound_label": "Binaural recovery"
+    }
+  },
+  {
+    "id": "insomnia",
+    "name": "Nalin",
+    "display_name": "Nalin - Light-Sensitive Sleeper",
+    "subtitle": "Older adult, fragmented sleep, sound sensitivity",
+    "headline": "Retired teacher who wakes easily from light and noise",
+    "fa_icon": "fa-bed",
+    "age": 65,
+    "occupation": "Retired teacher",
+    "avatar_color": "#9b8cff",
+    "bio": "Nalin has shallow sleep and often wakes after midnight. She is sensitive to bright light and abrupt sound changes, so the agent must keep interventions very gentle.",
+    "symptoms": ["Light sleep", "Wakes for bathroom trips", "Hard to fall back asleep"],
+    "goals": ["Stay asleep longer", "Reduce nighttime awakenings", "Use gentle environment cues"],
+    "agent_memory": [
+      "Bright light after midnight makes it harder for her to fall back asleep.",
+      "Deep sleep low-frequency sound should stay very quiet for comfort.",
+      "She prefers reassurance and simple explanations."
+    ],
+    "known_patterns": ["Fragmented sleep", "Light sensitivity", "Circadian rhythm disruption"],
+    "preferred_intervention": {
+      "light": "near-dark blue",
+      "sound": "deep_sleep",
+      "breathing": "natural slow breathing",
+      "tone": "gentle and simple"
+    },
+    "metrics": {
+      "sleep_hours": 5.0,
+      "sleep_quality": 45,
+      "heart_rate_avg": 65,
+      "heart_rate_night": 62,
+      "stress_level": 40,
+      "steps_today": 4500,
+      "hrv": 45,
+      "bmi": 23.5
+    },
+    "sleep_chart": [
+      { "day": "Mon", "hours": 5.2 },
+      { "day": "Tue", "hours": 4.8 },
+      { "day": "Wed", "hours": 5.0 },
+      { "day": "Thu", "hours": 4.5 },
+      { "day": "Fri", "hours": 5.5 },
+      { "day": "Sat", "hours": 5.0 },
+      { "day": "Sun", "hours": 4.9 }
+    ],
+    "smart_home": {
+      "light_mode": "dim",
+      "light_color": "#5b8def",
+      "sound_theme": "deep_sleep",
+      "sound_label": "Deep sleep low tone"
+    }
+  },
+  {
+    "id": "new_parent",
+    "name": "Mina",
+    "display_name": "Mina - New Parent Recovery",
+    "subtitle": "Interrupted sleep, postpartum fatigue, irregular schedule",
+    "headline": "New parent trying to recover in short sleep windows",
+    "fa_icon": "fa-baby",
+    "age": 34,
+    "occupation": "Product Designer and new parent",
+    "avatar_color": "#6ea8fe",
+    "bio": "Mina sleeps in short blocks because of childcare. Her total sleep is not always terrible, but recovery is poor because sleep timing is fragmented and unpredictable.",
+    "symptoms": ["Interrupted sleep blocks", "Daytime fatigue", "Stress spikes after night waking"],
+    "goals": ["Recover faster during short sleep windows", "Reduce stress after waking", "Avoid overstimulation at night"],
+    "agent_memory": [
+      "She may only have a short window to sleep, so interventions must work quickly.",
+      "After night waking, low blue light and ocean sound help her settle without waking others.",
+      "The agent should avoid long routines and prioritize fast nervous-system downshift."
+    ],
+    "known_patterns": ["Fragmented schedule", "Night waking", "Short recovery windows"],
+    "preferred_intervention": {
+      "light": "very dim blue",
+      "sound": "ocean",
+      "breathing": "2-minute downshift breathing",
+      "tone": "supportive and time-aware"
+    },
+    "metrics": {
+      "sleep_hours": 5.8,
+      "sleep_quality": 48,
+      "heart_rate_avg": 78,
+      "heart_rate_night": 74,
+      "stress_level": 68,
+      "steps_today": 6200,
+      "hrv": 31,
+      "bmi": 24.2
+    },
+    "sleep_chart": [
+      { "day": "Mon", "hours": 5.4 },
+      { "day": "Tue", "hours": 6.1 },
+      { "day": "Wed", "hours": 4.9 },
+      { "day": "Thu", "hours": 5.6 },
+      { "day": "Fri", "hours": 6.3 },
+      { "day": "Sat", "hours": 5.2 },
+      { "day": "Sun", "hours": 5.8 }
+    ],
+    "smart_home": {
+      "light_mode": "night",
+      "light_color": "#5b8def",
+      "sound_theme": "ocean",
+      "sound_label": "Low ocean"
+    }
+  }
+]
