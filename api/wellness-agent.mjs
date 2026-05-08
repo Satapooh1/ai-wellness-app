@@ -2,31 +2,32 @@
  * Vercel Serverless Function — POST /api/wellness-agent
  * แทน Express route ใน server/index.mjs
  */
-
-// Load .env manually (Vercel จะ inject env vars โดยตรง แต่ local dev ต้องการ)
-try {
-  const { readFileSync } = await import('fs');
-  const { resolve, dirname } = await import('path');
-  const { fileURLToPath } = await import('url');
-  const __dirname = dirname(fileURLToPath(import.meta.url));
-  const envPath = resolve(__dirname, '../.env');
-  const lines = readFileSync(envPath, 'utf-8').split('\n');
-  for (const line of lines) {
-    const [k, ...rest] = line.split('=');
-    const key = k?.trim();
-    if (key && !key.startsWith('#')) {
-      const val = rest.join('=').trim().replace(/^["']|["']$/g, '');
-      if (!process.env[key]) process.env[key] = val;
-      if (key === 'VITE_OPENAI_API_KEY' && !process.env.OPENAI_API_KEY) {
-        process.env.OPENAI_API_KEY = val;
-      }
-    }
-  }
-} catch (_) { /* .env not found is OK on Vercel */ }
-
+import { readFileSync } from 'fs';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { runWellnessAgents } from '../server/wellnessAgents.mjs';
 
+function loadEnv() {
+  try {
+    const __dirname = dirname(fileURLToPath(import.meta.url));
+    const envPath = resolve(__dirname, '../.env');
+    const lines = readFileSync(envPath, 'utf-8').split('\n');
+    for (const line of lines) {
+      const [k, ...rest] = line.split('=');
+      const key = k?.trim();
+      if (key && !key.startsWith('#')) {
+        const val = rest.join('=').trim().replace(/^["']|["']$/g, '');
+        if (!process.env[key]) process.env[key] = val;
+        if (key === 'VITE_OPENAI_API_KEY' && !process.env.OPENAI_API_KEY) {
+          process.env.OPENAI_API_KEY = val;
+        }
+      }
+    }
+  } catch (_) { /* .env not found is OK on Vercel */ }
+}
+
 export default async function handler(req, res) {
+  loadEnv(); // load .env for local dev (no-op on Vercel)
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
