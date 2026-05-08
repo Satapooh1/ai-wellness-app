@@ -91,9 +91,15 @@ export default function WelcomeScreen({ onSelectPersona }) {
                 className="glass text-left p-4 w-full cursor-pointer transition-all"
               >
                 <div className="flex items-start gap-3">
-                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0"
-                    style={{ background: `${persona.avatar_color}20`, border: `1px solid ${persona.avatar_color}40` }}>
-                    <i className={`fa-solid ${persona.fa_icon} text-xl`} style={{ color: persona.avatar_color }} />
+                  <div className="w-14 h-14 rounded-2xl overflow-hidden flex-shrink-0"
+                    style={{ border: `2px solid ${persona.avatar_color}40` }}>
+                    {persona.image
+                      ? <img src={persona.image} alt={persona.name} className="w-full h-full object-cover" />
+                      : <div className="w-full h-full flex items-center justify-center"
+                          style={{ background: `${persona.avatar_color}20` }}>
+                          <i className={`fa-solid ${persona.fa_icon} text-xl`} style={{ color: persona.avatar_color }} />
+                        </div>
+                    }
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between gap-2">

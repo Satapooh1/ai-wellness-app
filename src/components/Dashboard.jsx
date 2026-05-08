@@ -270,9 +270,15 @@ export default function Dashboard({ persona, onAnalyze, onSleepEnv, onBack }) {
           เลือก Persona
         </button>
         <div className="flex items-center gap-3 mb-3">
-          <div className="w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0"
-            style={{ background: `${persona.avatar_color}20`, border: `1px solid ${persona.avatar_color}30` }}>
-            <i className={`fa-solid ${persona.fa_icon} text-lg`} style={{ color: persona.avatar_color }} />
+          <div className="w-12 h-12 rounded-2xl overflow-hidden flex-shrink-0"
+            style={{ border: `2px solid ${persona.avatar_color}40` }}>
+            {persona.image
+              ? <img src={persona.image} alt={persona.name} className="w-full h-full object-cover" />
+              : <div className="w-full h-full flex items-center justify-center"
+                  style={{ background: `${persona.avatar_color}20` }}>
+                  <i className={`fa-solid ${persona.fa_icon} text-lg`} style={{ color: persona.avatar_color }} />
+                </div>
+            }
           </div>
           <div className="min-w-0">
             <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>Health profile of</p>

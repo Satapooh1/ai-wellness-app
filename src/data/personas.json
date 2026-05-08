@@ -2,6 +2,7 @@
   {
     "id": "burnout",
     "name": "Praew",
+    "image": "/personas/Preaw.png",
     "display_name": "Praew - Burnout Marketer",
     "subtitle": "High stress, short sleep, late-night work",
     "headline": "Startup marketer whose brain stays online after work",
@@ -49,6 +50,36 @@
       "sound_theme": "rain",
       "sound_label": "Soft rain"
     },
+    "agent_log": [
+      {
+        "time": "10:42 PM",
+        "signal": "HR 94 bpm + stress index 88% detected",
+        "action": "Activated soft rain sound · dimmed lights to warm amber 8%",
+        "result": "HR dropped to 81 bpm within 9 minutes",
+        "type": "risk"
+      },
+      {
+        "time": "11:18 PM",
+        "signal": "No sleep onset after 35 min in bed",
+        "action": "Triggered 4-7-8 breathing guide (silent haptic cue)",
+        "result": "Sleep onset detected 12 min later",
+        "type": "watch"
+      },
+      {
+        "time": "3:04 AM",
+        "signal": "Micro-wake + elevated HR 87 bpm",
+        "action": "Kept lights off · maintained rain sound · no alerts sent",
+        "result": "Returned to sleep within 6 minutes",
+        "type": "watch"
+      },
+      {
+        "time": "6:30 AM",
+        "signal": "Pre-wake window detected (light sleep phase)",
+        "action": "Gradual light increase to simulate sunrise over 20 min",
+        "result": "Natural wake — no alarm triggered",
+        "type": "good"
+      }
+    ],
     "wellness_plan": {
       "sleep": {
         "icon": "fa-moon",
@@ -115,6 +146,7 @@
   {
     "id": "chronic",
     "name": "Somchai",
+    "image": "/personas/Somchai.png",
     "display_name": "Somchai - Metabolic Risk Manager",
     "subtitle": "Low steps, high BMI, early blood pressure risk",
     "headline": "Sales manager with travel meals and low daily movement",
@@ -162,6 +194,36 @@
       "sound_theme": "ocean",
       "sound_label": "Ocean waves"
     },
+    "agent_log": [
+      {
+        "time": "10:15 PM",
+        "signal": "Post-dinner HR 88 bpm · elevated from client dinner",
+        "action": "Activated ocean waves sound · cooled room to 20°C",
+        "result": "HR normalized to 74 bpm by 10:50 PM",
+        "type": "watch"
+      },
+      {
+        "time": "1:22 AM",
+        "signal": "Snoring pattern detected (airway restriction signal)",
+        "action": "Sent gentle vibration alert to smart band · side-sleep nudge",
+        "result": "Snoring reduced 80% within 4 minutes",
+        "type": "risk"
+      },
+      {
+        "time": "3:48 AM",
+        "signal": "Breathing irregularity — shallow breath cycle",
+        "action": "Increased room airflow slightly · lowered sound frequency",
+        "result": "Breathing rhythm stabilized",
+        "type": "watch"
+      },
+      {
+        "time": "6:15 AM",
+        "signal": "Light sleep phase + morning BP window",
+        "action": "Sunrise simulation started · no alarm — natural wake",
+        "result": "Woke within target window",
+        "type": "good"
+      }
+    ],
     "wellness_plan": {
       "sleep": {
         "icon": "fa-moon",
@@ -228,6 +290,7 @@
   {
     "id": "overtrained",
     "name": "Mark",
+    "image": "/personas/Mark.png",
     "display_name": "Mark - Overtrained Athlete",
     "subtitle": "High training load, low HRV, recovery risk",
     "headline": "Triathlon coach pushing through recovery debt",
@@ -275,6 +338,36 @@
       "sound_theme": "binaural",
       "sound_label": "Binaural recovery"
     },
+    "agent_log": [
+      {
+        "time": "9:52 PM",
+        "signal": "HRV 22 ms — critical recovery deficit detected",
+        "action": "Immediately activated binaural delta protocol · near-dark room",
+        "result": "HRV trend improved to 28 ms by midnight",
+        "type": "risk"
+      },
+      {
+        "time": "11:35 PM",
+        "signal": "Sympathetic spike — HR elevation during sleep",
+        "action": "Extended breathing guide · lowered room temp by 1°C",
+        "result": "Parasympathetic recovery initiated",
+        "type": "watch"
+      },
+      {
+        "time": "2:40 AM",
+        "signal": "REM disruption signal detected",
+        "action": "Blocked all notifications · maintained complete darkness",
+        "result": "REM cycle resumed within 8 minutes",
+        "type": "watch"
+      },
+      {
+        "time": "6:00 AM",
+        "signal": "HRV recovered to 34 ms — Zone 1 cleared",
+        "action": "Gradual light activation · recovery summary prepared",
+        "result": "Safe to train at low intensity today",
+        "type": "good"
+      }
+    ],
     "wellness_plan": {
       "sleep": {
         "icon": "fa-moon",
@@ -341,6 +434,7 @@
   {
     "id": "insomnia",
     "name": "Nalin",
+    "image": "/personas/Nalin.png",
     "display_name": "Nalin - Light-Sensitive Sleeper",
     "subtitle": "Older adult, fragmented sleep, sound sensitivity",
     "headline": "Retired teacher who wakes easily from light and noise",
@@ -388,6 +482,36 @@
       "sound_theme": "deep_sleep",
       "sound_label": "Deep sleep low tone"
     },
+    "agent_log": [
+      {
+        "time": "8:45 PM",
+        "signal": "Sunset + circadian wind-down window opened",
+        "action": "Began gradual dimming sequence · warm amber at 6%",
+        "result": "Melatonin window supported — sleep onset 9:20 PM",
+        "type": "good"
+      },
+      {
+        "time": "12:18 AM",
+        "signal": "Movement detected — bathroom trip",
+        "action": "Activated dim amber path light only · no overhead light",
+        "result": "Returned to sleep in 11 minutes — circadian preserved",
+        "type": "watch"
+      },
+      {
+        "time": "2:55 AM",
+        "signal": "Sleep fragmentation — 3rd light-sleep episode",
+        "action": "Played deep-sleep tone at lowest volume (8 dB)",
+        "result": "Consolidated sleep resumed",
+        "type": "watch"
+      },
+      {
+        "time": "5:30 AM",
+        "signal": "Natural pre-wake light sleep phase",
+        "action": "Very slow sunrise simulation over 25 min · no alarm",
+        "result": "Gentle natural wake — no jarring transition",
+        "type": "good"
+      }
+    ],
     "wellness_plan": {
       "sleep": {
         "icon": "fa-moon",
@@ -454,6 +578,7 @@
   {
     "id": "new_parent",
     "name": "Mina",
+    "image": "/personas/Mina.png",
     "display_name": "Mina - New Parent Recovery",
     "subtitle": "Interrupted sleep, postpartum fatigue, irregular schedule",
     "headline": "New parent trying to recover in short sleep windows",
@@ -501,6 +626,36 @@
       "sound_theme": "ocean",
       "sound_label": "Low ocean"
     },
+    "agent_log": [
+      {
+        "time": "11:20 PM",
+        "signal": "Baby monitor spike — wake predicted in 4 min",
+        "action": "Pre-activated dim blue light for feeding · ocean sound ready",
+        "result": "Environment ready before baby woke",
+        "type": "watch"
+      },
+      {
+        "time": "1:45 AM",
+        "signal": "Night wake + stress signal 72% in Mina",
+        "action": "Ocean sound activated immediately · lights at 3% blue",
+        "result": "Stress signal dropped to 48% within 5 minutes",
+        "type": "risk"
+      },
+      {
+        "time": "2:08 AM",
+        "signal": "Settling detected — baby back to sleep",
+        "action": "Sound faded out over 3 min · lights off automatically",
+        "result": "Mina back to sleep in 9 minutes",
+        "type": "good"
+      },
+      {
+        "time": "4:30 AM",
+        "signal": "Next wake window predicted from pattern model",
+        "action": "Environment pre-configured for feeding · phone on silent",
+        "result": "Smooth transition — no scrambling in the dark",
+        "type": "good"
+      }
+    ],
     "wellness_plan": {
       "sleep": {
         "icon": "fa-moon",
