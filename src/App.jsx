@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import WelcomeScreen from './components/WelcomeScreen';
+import AgentAlertScreen from './components/AgentAlertScreen';
 import Dashboard from './components/Dashboard';
 import AIAnalysis from './components/AIAnalysis';
 import InsightScreen from './components/InsightScreen';
@@ -10,11 +11,12 @@ import { useSmartEnvironment } from './hooks/useSmartEnvironment';
 import './index.css';
 
 const SCREENS = {
-  WELCOME:   'welcome',
-  DASHBOARD: 'dashboard',
-  ANALYZING: 'analyzing',
-  INSIGHT:   'insight',
-  SLEEP_ENV: 'sleep_env',
+  WELCOME:       'welcome',
+  AGENT_ALERT:   'agent_alert',
+  DASHBOARD:     'dashboard',
+  ANALYZING:     'analyzing',
+  INSIGHT:       'insight',
+  SLEEP_ENV:     'sleep_env',
 };
 
 const pageVariants = {
@@ -43,7 +45,7 @@ export default function App() {
 
   const handleSelectPersona = (persona) => {
     setSelectedPersona(persona);
-    setScreen(SCREENS.DASHBOARD);
+    setScreen(SCREENS.AGENT_ALERT);
   };
 
   const handleAnalyze = async () => {
@@ -81,6 +83,16 @@ export default function App() {
           <motion.div key="welcome" variants={pageVariants} initial="initial" animate="animate" exit="exit"
             transition={{ duration: 0.3 }}>
             <WelcomeScreen onSelectPersona={handleSelectPersona} />
+          </motion.div>
+        )}
+
+        {screen === SCREENS.AGENT_ALERT && selectedPersona && (
+          <motion.div key="agent_alert" variants={pageVariants} initial="initial" animate="animate" exit="exit"
+            transition={{ duration: 0.3 }}>
+            <AgentAlertScreen
+              persona={selectedPersona}
+              onContinue={() => setScreen(SCREENS.DASHBOARD)}
+            />
           </motion.div>
         )}
 
